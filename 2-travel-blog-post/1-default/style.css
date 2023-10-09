@@ -1,0 +1,136 @@
+html {
+  font-size: 20px;
+}
+
+body {
+  background: #fdfbf5;
+  margin: 0 auto;
+  padding: 0 2rem;
+  font-family: "system-ui", sans-serif;
+  box-sizing: border-box;
+  max-width: 1000px;
+  line-height: 1.4;
+}
+
+blockquote {
+  padding: 2rem;
+  border: 3px double hotpink;
+}
+
+p {
+  max-width: 52ch;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.75rem;
+}
+
+a {
+  color: mediumvioletred;
+}
+
+ul {
+  list-style: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+}
+
+figure {
+  width: 100%;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: circle;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.grid-2 figcaption {
+  float: none;
+  margin: -1rem auto 1rem;
+}
+
+.leading {
+  font-size: 120%;
+}
+
+.leading::first-letter {
+  font-size: 150%;
+  font-weight: 800;
+}
+
+.hero {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.hero figcaption {
+  margin: -1rem auto 0;
+}
+
+figcaption {
+  font-size: 80%;
+  background: mistyrose;
+  padding: 1rem;
+  margin: -1rem 0 1rem -1rem;
+  z-index: 1;
+  position: relative;
+  width: 80%;
+  max-width: 400px;
+}
+
+figure + figure figcaption {
+  float: right;
+  margin: -1rem -1rem 1rem 0;
+}
+
+figure img:not(.hero) {
+  background: pink;
+}
+
+footer {
+  font-style: italic;
+  text-align: center;
+  padding: 3rem;
+  color: gray;
+}
+
+.p-group-flex {
+  display: flex;
+}
+
+.p-group-flex p {
+  margin: 1rem;
+}

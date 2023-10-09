@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examples of content-visibility property</title>
+    <style>
+      body {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+        font-size: 16px;
+        line-height: 1.2;
+        margin: 1rem auto;
+        max-width: 700px;
+      }
+
+      :is(h1, h2, h3) code {
+        font-size: 0.9em;
+      }
+
+      code {
+        font-family: "Fira Code Mono", "Courier New", Courier, monospace;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Examples using <code>content-visibility</code></h1>
+    <section>
+      <h2>Example 1 - Landing page</h2>
+      <p>
+        A tasteful landing page for the artist Angèle, designed/coded by Rafaela
+        Lucas. It is of typical size with 4 major sections. It has some
+        JavaScript to make a slideshow widget as part of the hero section. I
+        think it is a good candidate for testing what
+        <code>content-visibility</code> can do for a typical webpage.
+      </p>
+      <img
+        src="img/angele.png"
+        alt="screenshot overview of angele landing page"
+      />
+      <p>
+        Taken from
+        <a href="https://codepen.io/rafaelavlucas/pen/BaBVWyL">this codepen</a>
+      </p>
+      <h3>Scenarios explored</h3>
+      <p>
+        I will test some scenarios to see the impact that the property can have
+        when applied to different parts of the page.
+      </p>
+      <ol>
+        <li>
+          Default style.
+          <a href="1-landing-page/1-default/">Visit demo</a>
+        </li>
+        <li>
+          Nav main menu has <code>content-visibility:auto</code> applied to it.
+          <a href="1-landing-page/2-nav-menu-content-visbility/">Visit demo</a>
+        </li>
+        <li>
+          Nav main menu with <code>content-visibility:auto</code> and
+          <code>content-intrinsic-size: 100vw 100vh;</code> specified.
+          <a href="1-landing-page/3-nav-menu-content-visbility-and-sizes/"
+            >Visit demo</a
+          >.
+        </li>
+        <li>
+          Lower 3 sections have
+          <code>content-visibility:auto</code> applied.
+          <a href="1-landing-page/4-lower-sections-content-visibility/"
+            >Visit demo</a
+          >.
+        </li>
+        <li>
+          Lower 3 sections have <code>content-visibility:auto</code> and
+          <code>contain-intrinsic-size: auto 480px;</code> applied.
+          <a
+            href="/1-landing-page/5-lower-sections-content-visibility-and-sizes/"
+            >View demo</a
+          >.
+        </li>
+        <li>
+          Lower 3 sections have
+          <code>content-visibility:hidden</code> applied.
+          <a href="1-landing-page/6-lower-sections-content-visibility-hidden/"
+            >Visit demo</a
+          >.
+        </li>
+        <li>
+          Apply
+          <code>content-visibility:auto</code> to hero section to see if a
+          penalty is incurred. Don't repeat this!!
+          <a href="1-landing-page/7-hero-section-content-visibility/"
+            >Visit demo</a
+          >.
+        </li>
+      </ol>
+    </section>
+    <section>
+      <h2>Example 2 - Travel blog post</h2>
+      <p>
+        This is the demo discussed in the web.dev article -
+        <a href="https://web.dev/content-visibility/"
+          >content-visibility: the new CSS property that boosts your rendering
+          performance</a
+        >. It is a travel blog that contains a set of stories, pictures, some
+        descriptive text, and 2 random <code>iframe</code>s!
+      </p>
+      <img
+        src="img/travel-blog-post.jpg"
+        alt="screenshot overview of travel blog post"
+      />
+      <h3>Scenarios explored</h3>
+      <ol>
+        <li>
+          Default style.
+          <a href="2-travel-blog-post/1-default/">Visit demo</a>
+        </li>
+        <li>
+          With <code>content-visibility:auto</code> applied to a few sections.
+          <a href="1-landing-page/2-nav-menu-content-visbility/">Visit demo</a>
+        </li>
+      </ol>
+    </section>
+  </body>
+</html>
