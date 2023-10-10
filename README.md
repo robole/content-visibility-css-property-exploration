@@ -6,6 +6,10 @@ The [`content-visibility`](https://developer.mozilla.org/en-US/docs/Web/CSS/cont
 
 I used [vite](https://vitejs.dev/) to run this as a mini-website. Just install the dependency (`npm install`) and run `vite`.
 
+## Performance auditing
+
+I deployed this as a website to Netlify to audit the pages. I performed the audit using Chrome DevTools v116 in incognito mode. I used an older laptop a Lenovo T460. AFAIK hardware and network issues will affect results.
+
 ## Example 1 - Landing page
 
 This is a tasteful landing page for the artist Angèle, designed/coded by Rafaela
@@ -49,9 +53,7 @@ when applied to different parts of the page.
 
 ## Example 2 - Travel blog post
 
-This is the demo discussed in the web.dev article by Una Kravets - [content-visibility: the new CSS property that boosts your rendering
-performance](https://web.dev/content-visibility). It is a travel blog that contains a set of stories, pictures, some
-descriptive text, and some random <code>iframe</code>s!
+This is the demo discussed in the web.dev article by Una Kravets - [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/content-visibility). It is a travel blog that contains a set of stories, pictures, some descriptive text, and some random <code>iframe</code>s!
 
 <img src="img/travel-blog-post.jpg" alt="screenshot overview of travel blog post"/>
 
@@ -60,3 +62,11 @@ descriptive text, and some random <code>iframe</code>s!
 1. Default style.
 1. With `content-visibility:auto` applied to a few sections.
 
+### Performance audit results
+
+The results I found were a lot more modest than Una's result. Perhaps, the hardware she used had some impact on that.
+
+| **#** | **Scenario**                                             | **Loading** | **Scripting** | **Rendering** | **Painting** | **System** | **Idle** | **Total** |
+|-------|----------------------------------------------------------|-------------|---------------|---------------|--------------|------------|----------|-----------|
+| 1     | Default style                                            | 36          | 4             | 237           | 277          | 548        | 8888     | 9990      |
+| 2     | With `content-visibility:auto` applied to a few sections | 66          | 2             | 117           | 157          | 421        | 9459     | 10222     |
