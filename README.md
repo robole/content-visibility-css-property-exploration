@@ -12,25 +12,22 @@ I deployed this as a website to Netlify to audit the pages. I performed the audi
 
 ## Example 1 - Landing page
 
-This is a tasteful landing page for the artist Angèle, designed/coded by Rafaela
-Lucas.
+This is a tasteful landing page for the artist Angèle, designed/coded by Rafaela Lucas.
 
 <img src="img/angele.jpg" alt="screenshot overview of angele landing page" style="display:block;margin:.5rem auto;"/>
 
-It is of typical size with 4 major sections. The main nav is hidden always and can be opened via a hamburger menu.It has some
-JavaScript to make a slideshow widget as part of the hero section.
+It is of typical size with 5 major sections. The main nav is hidden always and can be opened via a hamburger menu.It has some JavaScript to make a slideshow widget as part of the hero section.
 
-I think it is a good candidate for realistically testing what `content-visibility` can do for a typical webpage.
+I think it is a good candidate for testing what `content-visibility` can do for a typical webpage.
 
 ### Scenarios explored
 
-I will test some scenarios to see the impact that the property can have
-when applied to different parts of the page.
+I will test some scenarios to see the impact that the property can have when applied to different parts of the page.
 
 1. Default style.
 1. Nav main menu has `content-visibility:auto` applied to it.
 1. Nav main menu with `content-visibility:auto` and `content-intrinsic-size: 100vw 100vh;` specified.
-1. Nav main menu with `content-visibility:hidden` specified. Switches value to `visible` when opened.
+1. Nav main menu with `content-visibility:hidden` specified. Switches value to `content-visibility:visible` when opened.
 1. Lower 3 sections have `content-visibility:auto` applied.
 1. Lower 3 sections have `content-visibility:auto` and `contain-intrinsic-size` specified.
 1. Lower 3 sections have `content-visibility:hidden` applied.
@@ -53,7 +50,7 @@ when applied to different parts of the page.
 
 ## Example 2 - Travel blog post
 
-This is the demo discussed in the web.dev article - [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/content-visibility). It is a travel blog that contains a set of stories, pictures, some descriptive text, and some random <code>iframe</code>s!
+This is the demo discussed in the web.dev article - [content-visibility: the new CSS property that boosts your rendering performance](https://web.dev/content-visibility). It is a travel blog that contains a set of stories, pictures, some descriptive text, and includes some random <code>iframe</code>s!
 
 <img src="img/travel-blog-post.jpg" alt="screenshot overview of travel blog post"/>
 
@@ -64,7 +61,7 @@ This is the demo discussed in the web.dev article - [content-visibility: the new
 
 ### Performance audit results
 
-The results I found were a lot more modest than web.dev teams result. For the second scenario, I observed a rendering time of 117ms, they observed 23ms. Perhaps, the hardware they used had some impact on that.
+The results I found were more modest than the results of the web.dev team. For the second scenario, I observed a rendering time of 117ms, they observed a rendering time of 23ms. I do not have an explanation for the variance.
 
 | **#** | **Scenario**                                             | **Loading** | **Scripting** | **Rendering** | **Painting** | **System** | **Idle** | **Total** |
 |-------|----------------------------------------------------------|-------------|---------------|---------------|--------------|------------|----------|-----------|
