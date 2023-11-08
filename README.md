@@ -72,7 +72,7 @@ Scenarios:
 
 ### Conclusion
 
-There was a significant improvement in rendering and painting when `content-visibility:auto` was used, in the region of 40% (see scenario B2 in table above). When I added `contain-intrinsic-size`, performance also improved sigificatntly (see scenario B3 in table). However, it was marginally worse than scenario B2. It is not apparent when `contain-intrinsic-size` is benefical, so it is best to test both scenarios.
+There was a significant improvement in rendering and painting when `content-visibility:auto` was used, in the region of 40% (see scenario B2 in table above). When I added `contain-intrinsic-size`, performance also improved sigificatntly (see scenario B3 in table). However, it was marginally worse than using `content-visibility:auto` on its own (scenario B2). It is not apparent if `contain-intrinsic-size` is benefical or not, so it is best to test both scenarios.
 
 Applying `content-visibility:auto` to the hero section led to a slightly longer loading time down for the page. I am not sure if the penalty would be more significant under different conditions. My guess is that it is best to avoid this scenario generally.
 
