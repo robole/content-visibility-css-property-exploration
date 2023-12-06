@@ -1,6 +1,8 @@
 # Exploration of `content-visibility` CSS property
 
-The [`content-visibility`](https://developer.mozilla.org/en-US/docs/Web/CSS/content-visibility) property provides control over wheter elements are rendered or not. Some rendering steps can be skipped for elements that are not yet needed by an user to improve performance. I want to explore a range of scenarios to see the true effect on performance.
+The [`content-visibility`](https://developer.mozilla.org/en-US/docs/Web/CSS/content-visibility) property provides control over whether elements are rendered or not. Some rendering steps can be skipped for elements that are not yet needed by an user to improve performance. I want to explore a range of scenarios to see the true effect on performance.
+
+**If you want to learn how to use `content-visibility`, you can read [the accompanying article](https://blog.logrocket.com/using-css-content-visibility-boost-rendering-performance/)**.
 
 ## Run the examples
 
